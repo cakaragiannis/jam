@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,KAAK,CAAC;EACJ,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,MAAM;EACnB,gBAAgB,EAAE,kBAAkB;EACpC,UAAU,EAAE,8EAGa;EACzB,eAAe,EAAE,YAAY;EAC7B,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,KAAK;CACf",
+    "sources": [
+        "WORKING SHEET.scss"
+    ],
+    "names": [],
+    "file": "WORKING SHEET.css"
+}

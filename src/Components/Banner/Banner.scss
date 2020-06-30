@@ -1,0 +1,60 @@
+.Banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    color: limegreen;
+
+    li {
+      letter-spacing: 0.15em;
+
+      &:nth-child(3) {
+        font-weight: 700;
+        font-size: 2em;
+      }
+
+      &:nth-child(2), &:nth-child(4) {
+        font-size: 1.2em;
+        font-weight: 400;
+        opacity: 0.8;
+      }
+
+      &:nth-child(1), &:nth-child(5) {
+        font-size: 0.9em;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3.5em;
+    margin-left: 0.2em;
+  }
+}
+
+@media only screen and (min-height: 370px) {
+  .Banner li {
+    margin: 0.6em 0;
+  }
+}
+
+@media only screen and (min-width: 375px) and (min-height: 600px) {
+  .Banner {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (min-height: 600px) {
+  .Banner {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 900px) and (min-height: 800px) {
+  .Banner {
+    font-size: 2.5rem;
+  }
+}

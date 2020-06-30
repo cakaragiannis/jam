@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "index.scss"
+        "Prompt.scss"
     ],
     "names": [],
-    "file": "index.css"
+    "file": "Prompt.css"
 }
