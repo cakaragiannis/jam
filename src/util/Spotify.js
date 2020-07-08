@@ -19,8 +19,8 @@ const Spotify = {
       window.history.pushState("Access Token", null, "/");
       return accessToken;
     } else {
-      const clientId = "c1abc4771ddb45a0a370b5e35e8234c2";
-      const redirectUri = "http://wide-eyed-town.surge.sh";
+      const clientId = ""; //your Spotify client Id
+      const redirectUri = ""; //your redirect
       const endpoint = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=playlist-read-collaborative%20playlist-modify-private%20playlist-modify-public%20user-read-recently-played`;
 
       window.location = endpoint;
