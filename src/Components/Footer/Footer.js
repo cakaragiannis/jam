@@ -6,8 +6,8 @@ function Footer(props) {
     <footer>
       {
         props.isAuth ? 
-        <p>Digging JAM.? <a href="#">Check out the source code here.</a></p> :
-        <p>Connect your Spotify<sup>&copy;</sup> account to get started.</p>
+        <p>Digging JAM.? <a href="https://github.com/cakaragiannis/jam">Check out the source code.</a></p> :
+        <p>Connect Spotify<sup>&copy;</sup> to get started.</p>
       }
     </footer>
   )

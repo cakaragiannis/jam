@@ -1,36 +1,224 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;0,900;1,100;1,200&display=swap");
-*, *::before, *::after {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;900&display=swap");
+:root {
+  --bg: radial-gradient(
+    circle at 80% 65%,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5) 75%
+  );
+  --accent: rgb(29, 185, 84);
+  --accent-light: rgb(30, 215, 96);
+  --accent-scroll: rgba(29, 185, 84, 0.5);
+}
+
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
 }
 
-.App {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 0.8rem;
-  color: white;
-  background: url(./background_photo_desktop.jpg) center right/cover no-repeat fixed #1ed751;
-  background-blend-mode: multiply;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
+h1 {
+  font-weight: 900;
+  font-size: 2.2rem;
 }
 
-@media only screen and (min-width: 600px) and (min-height: 600px) {
+p {
+  position: relative;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: var(--accent-light);
+}
+
+h2,
+input {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  border: none;
+  border-bottom: thin rgba(255, 255, 255, 0.8) solid;
+  padding: 0.1em 0.3em;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 0;
+  position: relative;
+}
+
+button:hover {
+  background-color: var(--accent-light);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+sup {
+  font-size: x-small;
+}
+
+.App {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  background: url(./background_photo_desktop.jpg) center right/cover no-repeat fixed var(--accent);
+  background-blend-mode: multiply;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: min-content auto min-content;
+      grid-template-rows: -webkit-min-content auto -webkit-min-content;
+      grid-template-rows: min-content auto min-content;
+  gap: 0.5em;
+}
+
+.App.unauth {
+  -ms-grid-rows: min-content auto min-content min-content;
+      grid-template-rows: -webkit-min-content auto -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content auto min-content min-content;
+}
+
+.App .container,
+.App footer {
+  background: var(--bg);
+}
+
+.App main {
+  grid-column: 1 / -1;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.5em;
+  -ms-grid-columns: 1px;
+      grid-template-columns: 1px;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(75% - 2em);
+  overflow-y: hidden;
+  -ms-scroll-snap-type: x proximity;
+      scroll-snap-type: x proximity;
+}
+
+.App main p {
+  padding: 1em 0.5em;
+}
+
+.App main:before, .App main:after {
+  content: "";
+  width: 1px;
+}
+
+.App main > div {
+  overflow-x: hidden;
+  background: var(--bg);
+  -webkit-backdrop-filter: blur(0.2rem);
+          backdrop-filter: blur(0.2rem);
+  padding: 0.5em;
+}
+
+.App main > div > span {
+  white-space: nowrap;
+  font-size: 8rem;
+  font-weight: 900;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  position: absolute;
+  right: -0.3em;
+  bottom: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  color: rgba(13, 37, 44, 0.3);
+}
+
+.App .saveBtn,
+.App .refreshBtn {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  padding: 0.5em 1.5em;
+  width: 100%;
+  -webkit-box-shadow: 0 0.6em black;
+          box-shadow: 0 0.6em black;
+}
+
+.App .cover {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-scroll);
+}
+
+@media only screen and (min-width: 374px) {
+  .App .cover {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .App main {
+    grid-auto-columns: calc(50% - 5em);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  :root {
+    font-size: 1.2rem;
+  }
   .App {
-    font-size: 1.1rem;
+    gap: 1em;
+  }
+  .App > .container,
+  .App footer {
+    grid-column: 1 / -1;
+  }
+  .App main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    justify-self: center;
+    width: 100%;
+    max-width: 1400px;
+    overflow-x: hidden;
+  }
+  .App main > * {
+    width: 31%;
   }
 }
 /*# sourceMappingURL=App.css.map */

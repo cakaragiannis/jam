@@ -2,11 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
   ul {
     list-style-type: none;
     text-align: center;
     padding: 0;
-    color: limegreen;
+    color: var(--accent);
 
     li {
       letter-spacing: 0.15em;
@@ -18,7 +19,7 @@
 
       &:nth-child(2), &:nth-child(4) {
         font-size: 1.2em;
-        font-weight: 400;
+        font-weight: 500;
         opacity: 0.8;
       }
 
@@ -43,18 +44,18 @@
 
 @media only screen and (min-width: 375px) and (min-height: 600px) {
   .Banner {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
 @media only screen and (min-width: 600px) and (min-height: 600px) {
   .Banner {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (min-width: 900px) and (min-height: 800px) {
   .Banner {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }

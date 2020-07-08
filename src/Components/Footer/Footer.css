@@ -1,16 +1,12 @@
 footer {
-  background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
-  padding: 1em;
   width: 100%;
+  padding: 0.5em;
 }
 
-footer a {
-  color: limegreen;
-  text-decoration: none;
-}
-
-footer a:hover, footer a:focus {
-  color: lime;
+@media only screen and (min-height: 900px) {
+  footer {
+    padding: 1.5em;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */

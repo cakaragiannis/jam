@@ -1,78 +1,61 @@
 .container {
-  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(0.2rem);
   width: 100%;
 }
 
 header {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 1em;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
 
-  p {
-    color: limegreen;
-
-    &:nth-of-type(1) {
-      position: relative;
-      top: -0.6em;
-      margin-right: auto;
-    }
-
-    & + p {
-      display: none;
-    }
+  p:nth-of-type(1) {
+    color: var(--accent);
+    top: -0.8em;
+    margin-right: auto;
   }
-  
+
   span {
-    font-weight: 400;
-  }
-}
-
-button {
-  background-color: limegreen;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.8em;
-  font-weight: 600;
-  color: white;
-  letter-spacing: 0.2em;
-  border: none;
-  border-radius: 3em;
-  padding: 0.5em 1em;
-
-  &:hover, &:focus {
-    background-color: lime;
-    transform: scale(1.05);
-    transition: 0.3s;
+    font-weight: 500;
   }
 
-  &.isAuth {
-    background-color: transparent;
-    border: 1px solid white;
+  button {
+    padding: 0.75em 2em;
+    margin: 0 0 1em;
+  }
+
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+  }
+
+  .hidden {
+    display: none;
+    margin: 1em;
   }
 }
 
 @media only screen and (min-width: 600px) {
   header {
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
     padding: 1em 2em;
-  }
 
-  button {
-    padding: 0.75em 1.5em;
+    button {
+      margin: 0;
+    }
   }
 }
 
-@media only screen and (min-width: 1000px) {
-  header p + p {
-    display: block;
-    margin: 0 1em;
-    color: white;
-  }
-
-  button {
-    padding: 0.75em 2em;
+@media only screen and (min-width: 900px) {
+  header {
+    .hidden {
+      display: block;
+    }
   }
 }
+
 
 

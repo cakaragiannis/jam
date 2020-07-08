@@ -1,83 +1,65 @@
 .container {
-  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(0.2rem);
+          backdrop-filter: blur(0.2rem);
   width: 100%;
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1em;
-}
-
-header p {
-  color: limegreen;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 header p:nth-of-type(1) {
-  position: relative;
-  top: -0.6em;
+  color: var(--accent);
+  top: -0.8em;
   margin-right: auto;
 }
 
-header p + p {
-  display: none;
-}
-
 header span {
-  font-weight: 400;
+  font-weight: 500;
 }
 
-button {
-  background-color: limegreen;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.8em;
-  font-weight: 600;
-  color: white;
-  letter-spacing: 0.2em;
-  border: none;
-  border-radius: 3em;
-  padding: 0.5em 1em;
+header button {
+  padding: 0.75em 2em;
+  margin: 0 0 1em;
 }
 
-button:hover, button:focus {
-  background-color: lime;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+header ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
 }
 
-button.isAuth {
-  background-color: transparent;
-  border: 1px solid white;
+header .hidden {
+  display: none;
+  margin: 1em;
 }
 
 @media only screen and (min-width: 600px) {
   header {
-    max-width: 1200px;
-    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
     padding: 1em 2em;
   }
-  button {
-    padding: 0.75em 1.5em;
+  header button {
+    margin: 0;
   }
 }
 
-@media only screen and (min-width: 1000px) {
-  header p + p {
+@media only screen and (min-width: 900px) {
+  header .hidden {
     display: block;
-    margin: 0 1em;
-    color: white;
-  }
-  button {
-    padding: 0.75em 2em;
   }
 }
 /*# sourceMappingURL=Header.css.map */

@@ -1,0 +1,51 @@
+.Track, .Playlist {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  border-bottom: thin rgba(255, 255, 255, 0.1) solid;
+  position: relative;
+  padding: 0.5em 0;
+  
+  img {
+    margin-right: 0.5rem;
+    width: 5rem;
+    display: block;
+  }
+  
+  span {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-left: 0.5em;
+    padding: 0 0.2em;
+    position: relative;
+    top: -1px;
+    border: thin solid white;
+  }
+
+  table {
+    margin-right: auto;
+  }
+
+  table, th, tr, td {
+    padding: 0;
+  }
+
+  button {
+    font-size: 1.8rem;
+    font-weight: 300;
+    background-color: transparent;
+    padding: 0;
+    color:white;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+
+    &:hover, &:focus {
+      color: var(--accent-light);
+      font-weight: 500;
+      transform: scale(1.3);
+      transition: 0.3s;
+    }
+  }
+}
