@@ -2,11 +2,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## JAM.
 
-HAM is a disappointing by-product of butchering up pigs. JAM is a simple playlist maker for Spotify. [An earlier version of this project (Jammming)]( wild-language.surge.sh) was orginally completed as part of a Codecademy learning pathway. However, I finished the project feeling as if it was far too much of a walkthrough and that I hadn't learnt enough to do it myself, without guidance. 
+HAM is a sandwich meat. JAM is a simple playlist maker for Spotify. 
 
-I left it aside and did the React official [Tic Tac Toe tutorial](creepy-slave.surge.sh) before coming back to Jammming and deciding to have a go at building it from scratch without guidance. The result is JAM and while I've no doubt it's full of niggles and bugs, I'm super proud of how it turned out as my first 95% independant React project.
+JAM is my first independant, tutorial-free React app; an evolution of a similar project I completed as part of my Codecademy Web Development course. I undertook this project lacking the confidence that I could build a React app of any sort without guidance, with hope that doing so would embed my knowledge and build my confidence with React. 
 
-Check it out and be sure to comment or share! Thank you.
+The Result is JAM.
+
+Note: JAM is fully functional however some users have reported slow loading speeds from their location and/or browser. Others have reported strange scroll behaviour. If you have insight into either of these issues, please let me know.
+
+Thanks for stopping by!
 
 [Follow me on Twitter](https://twitter.com/chrisandrew_dev)
 
